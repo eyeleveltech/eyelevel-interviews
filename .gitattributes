@@ -1,0 +1,4 @@
+# Keep Unix line endings so the bash installer and systemd/Apache files work on the Linux server,
+# even when committed from Windows (core.autocrlf=true).
+* text=auto eol=lf
+*.png binary

@@ -1,0 +1,8 @@
+.vercel
+node_modules/
+
+# Secrets: the real settings file lives only at /etc/eyelevel-interviews.env on the server. Never commit it.
+*.env
+.env
+.env.*
+!vps/.env.example

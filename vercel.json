@@ -1,0 +1,28 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "30 3 * * *"
+    }
+  ],
+  "functions": {
+    "api/cron.js": {
+      "maxDuration": 60
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}
