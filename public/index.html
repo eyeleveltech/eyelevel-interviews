@@ -485,7 +485,8 @@
     $('loading').hidden = true;
     if (!d) { alertMsg('The page could not be loaded. Refresh to try again.'); return false; }
     if (!d.valid) { $('invalid').hidden = false; return false; }
-    slots = d.slots; current = d.current; cap = Number(d.cap) || 0;   // 0 = any number of candidates can take the same slot role = d.role; phase = d.phase; contact = d.contact || null;
+    slots = d.slots; current = d.current; cap = Number(d.cap) || 0;   // 0 = any number of candidates can take the same slot
+    role = d.role; phase = d.phase; contact = d.contact || null;
     const nm = d.first.replace(/[<>&]/g, '');
     $('title').innerHTML = 'Hi ' + nm + ',<br><span>' + (phase === 'talk' ? 'you are shortlisted.' : phase === 'book' ? 'schedule your interview.' : 'thank you.') + '</span>';
     $('f-role').textContent = d.role; $('m-role').textContent = d.role; $('m-info').classList.add('on'); $('m-laptop').hidden = d.laptop === false;
